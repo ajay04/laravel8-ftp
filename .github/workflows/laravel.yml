@@ -23,3 +23,12 @@ jobs:
       run: chmod -R 777 storage bootstrap/cache
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       run: vendor/bin/phpunit
+    
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: ftpupload.net
+        FTP_USERNAME: ezyro_26653032
+        FTP_PASSWORD: ns93d4apn5ti1q
+        REMOTE_DIR: /htdocs/
+#         ARGS: --delete
